@@ -1,0 +1,10 @@
+{
+  "name": "Sound Tracker",
+  "description": "Track Tab Sounds",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "",
+    "default_icon": ""
+  }
+}
