@@ -13,7 +13,7 @@ async function getCurrentTab() {
 async function getAllTabs() {
     let tabs = [];
     i = 1;
-    chrome.tabs.query({}, function (tabs) {
+    chrome.tabs.query({audible: true}, function (tabs) {
         tabs.forEach(function (tab) {
             document.getElementById(i).innerHTML = tab.title;
             i++
