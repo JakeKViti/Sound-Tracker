@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    getCurrentTab();
+    //getCurrentTab();
+    getAllTabs();
 })
 
 async function getCurrentTab() {
@@ -9,11 +10,13 @@ async function getCurrentTab() {
     return tab;
 }
 
-async function getAllTab() {
+async function getAllTabs() {
     let tabs = [];
+    i = 1;
     chrome.tabs.query({}, function (tabs) {
         tabs.forEach(function (tab) {
-            tabs.push(tab);
+            document.getElementById(i).innerHTML = tab.title;
+            i++
         });
     });
     return tabs;
